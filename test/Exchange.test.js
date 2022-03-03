@@ -1,4 +1,4 @@
-// import { tokens, ether, EVM_REVERT, ETHER_ADDRESS } from './helpers.js'
+import { tokens, ether, EVM_REVERT, ETHER_ADDRESS } from './helpers.js'
 
 const { invalid } = require('moment')
 
@@ -8,17 +8,17 @@ const Exchange = artifacts.require('./Exchange')
 require('chai')
     .use(require('chai-as-promised'))
     .should() 
-const ETHER_ADDRESS = '0x0000000000000000000000000000000000000000'
+// const ETHER_ADDRESS = '0x0000000000000000000000000000000000000000'
 
-const EVM_REVERT = 'VM Exception while processing transaction: revert'
+// const EVM_REVERT = 'VM Exception while processing transaction: revert'
 
-const ether = (n) => {
-    return new web3.utils.BN(
-        web3.utils.toWei(n.toString(), 'ether')
-    )
-}
+// const ether = (n) => {
+//     return new web3.utils.BN(
+//         web3.utils.toWei(n.toString(), 'ether')
+//     )
+// }
 
-const tokens = (n) => ether(n)
+// const tokens = (n) => ether(n)
 
 
 contract('Exchange', ([deployer, feeAccount, user1, user2]) => {

@@ -36,20 +36,20 @@ const showMyOpenOrders = (props) => {
 
     return(
         <tbody>
-        { myOpenOrders.map((order) => {
-            return (
-            <tr key={order.id}>
-                <td className={`text-${order.orderTypeClass}`}>{order.tokenAmount}</td>
-                <td className={`text-${order.orderTypeClass}`}>{order.tokenPrice}</td>
-                <td
-                className="text-muted cancel-order"
-                onClick={(e) => {
-                    cancelOrder(dispatch, exchange, order, account)
-                }}
-                >X</td>
-            </tr>
-            )
-        }) }
+            { myOpenOrders.map((order) => {
+                return (
+                <tr key={order.id}>
+                    <td className={`text-${order.orderTypeClass}`}>{order.tokenAmount}</td>
+                    <td className={`text-${order.orderTypeClass}`}>{order.tokenPrice}</td>
+                    <td
+                        className="text-muted cancel-order"
+                        onClick={(e) => {
+                            cancelOrder(dispatch, exchange, order, account)
+                        }}
+                    >X</td>
+                </tr>
+                )
+            }) }
         </tbody>
     )
 }
@@ -68,8 +68,8 @@ class MyTransactions extends Component {
                     <thead>
                     <tr>
                         <th>Time</th>
-                        <th>ARS</th>
-                        <th>ARS/ETH</th>
+                        <th>AURS</th>
+                        <th>AURS/ETH</th>
                     </tr>
                     </thead>
                     { this.props.showMyFilledOrders ? showMyFilledOrders(this.props) : <Spinner type="table" />}
@@ -80,7 +80,7 @@ class MyTransactions extends Component {
                     <thead>
                     <tr>
                         <th>Amount</th>
-                        <th>ARS/ETH</th>
+                        <th>AURS/ETH</th>
                         <th>Cancel</th>
                     </tr>
                     </thead>

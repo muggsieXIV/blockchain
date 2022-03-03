@@ -21,10 +21,10 @@ const priceSymbol = (lastPriceChange) => {
 const showPriceChart = (priceChart) => {
     return(
         <div className="price-chart">
-        <div className="price">
-            <h4>ARS/ETH &nbsp; {priceSymbol(priceChart.lastPriceChange)} &nbsp; {priceChart.lastPrice}</h4>
-        </div>
-        <Chart options={chartOptions} series={priceChart.series} type='candlestick' width='100%' height='100%' />
+            <div className="price">
+                <h4>WEI/ETH &nbsp; {priceSymbol(priceChart.lastPriceChange)} &nbsp; {priceChart.lastPrice}</h4>
+            </div>
+            <Chart options={chartOptions} series={priceChart.series} type='candlestick' width='100%' height='100%' />
         </div>
     )
 }
